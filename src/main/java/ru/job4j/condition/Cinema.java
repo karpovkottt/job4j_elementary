@@ -2,13 +2,17 @@ package ru.job4j.condition;
 
 public class Cinema {
 
-    public static void access(int age) {
+    public static String access(int age) {
         System.out.println("The age of the customer is : " + age);
-        if (age > 18) {
-            System.out.println("Welcome to the cinema.");
+        String rsl;
+        if (age >= 18) {
+            rsl = "Welcome to the cinema.";
+            System.out.println(rsl);
         } else {
-            System.out.println("It is not for you.");
+            rsl = "It is not for you.";
+            System.out.println(rsl);
         }
+        return rsl;
     }
 
     public static void main(String[] args) {
